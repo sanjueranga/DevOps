@@ -6,6 +6,9 @@ I have use 3 aws services here,
 codecommit,pipeline,S3 buckets.
 All are free-tier eligible and free of charge
 
+
+
+
 > ## Step 1 :
 
 > **create a codecomit repository**
@@ -19,6 +22,9 @@ All are free-tier eligible and free of charge
 ![Alt text](pics/role.png)
 
 So that the IAM user can commit to this codecommit repo.
+
+
+
 
 > ## Step 2 :
 >
@@ -39,6 +45,9 @@ connect local repo using ` git add remote`
 git remote add origin https://git-codecommit.us-east-2.amazonaws.com/v1/repos/MyDemoRepo
 ```
 
+
+
+
 > ## Step 3 :
 >
 > **pushing local files**
@@ -47,6 +56,9 @@ add, commit , push local files in to the codecommit repo.
 it should finally show files ( you have to login using IAM user credentials which has permisson for codecommit)
 
 ![Alt text](pics/code_content.png)
+
+
+
 
 ## Step 4 :
 
@@ -78,7 +90,10 @@ We have to add a bucket policy in order to bucket avalible for public access
 
 ![Alt text](pics/pol.png)
 
-> ## Step 4
+
+
+
+> ## Step 5
 >
 > **Creating the code PipeLine**
 
