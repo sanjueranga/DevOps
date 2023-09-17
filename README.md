@@ -1,4 +1,4 @@
-> # End-to-end DevOps Project
+# End-to-end DevOps Project
 
 ## Table of Contents
 
