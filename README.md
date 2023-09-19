@@ -5,96 +5,147 @@
 1. [Project Overview](#project-overview)
    - Description of the project's purpose and goals.
 2. [Prerequisites](#prerequisites)
+
    - Requirements for running and deploying the project.
-3. [Setup Instructions](#setup-instructions)
-   - How to set up the project locally or in your chosen environment.
-4. [Deployment Instructions](#deployment-instructions)
-   - How to deploy the project to your chosen cloud provider or platform.
-5. [Dockerization](#dockerization)
+
+3. [Dockerization](#dockerization)
    - Building Docker images and running containers.
-6. [Kubernetes Deployment](#kubernetes-deployment)
+4. [Kubernetes Deployment](#kubernetes-deployment)
    - Deploying the application to a Kubernetes cluster.
-7. [CI/CD Pipeline](#ci-cd-pipeline)
+5. [CI/CD Pipeline](#ci-cd-pipeline)
    - Details of the Continuous Integration/Continuous Deployment pipeline.
-8. [Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
+6. [Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
    - Provisioning and managing cloud infrastructure with IaC tools.
-9. [Monitoring and Logging](#monitoring-and-logging)
+7. [Monitoring and Logging](#monitoring-and-logging)
    - How the application and infrastructure are monitored, including logs and metrics.
-10. [Security](#security)
+8. [Security](#security)
 
-    - Security measures implemented, access controls, and best practices.
+   - Security measures implemented, access controls, and best practices.
 
-11. [Scaling and High Availability](#scaling-and-high-availability)
+9. [Scaling and High Availability](#scaling-and-high-availability)
 
-    - Design for scalability and high availability.
+   - Design for scalability and high availability.
 
-12. [Contributing](#contributing)
-
-    - Guidelines for contributing to the project.
-
-13. [License](#license)
-
-    - Project's licensing information.
-
-14. [Acknowledgments](#acknowledgments)
-
-    - Credits to third-party libraries and tools.
-
-15. [Contact Information](#contact-information)
-
-    - How to contact project maintainers.
-
-16. [Troubleshooting](#troubleshooting)
-
-    - Common issues and solutions.
-
-17. [FAQ](#faq)
-
-    - Frequently asked questions.
-
-18. [References](#references)
+10. [References](#references)
     - External documentation and resources.
 
 ## Project Overview
 
+\
 Welcome to the DevOps Project Documentation! This comprehensive guide provides detailed insights into a dynamic DevOps project that leverages modern cloud technologies, containerization, CI/CD pipelines, and Infrastructure as Code (IaC) practices.
 
+\
 **Cloud-Centric Approach:**
+\
 Explore how this project harnesses the power of leading cloud providers, such as AWS, Azure, or GCP, to deploy scalable and resilient applications.
 
+\
 **Dockerization and Kubernetes:**
+\
 Dive into the world of containerization with Docker and learn how Kubernetes orchestrates containers for efficient application management.
 
-**Continuous Integration/Continuous Deployment (CI/CD):**  
+\
+**Continuous Integration/Continuous Deployment (CI/CD):**
+\
  Discover how automated CI/CD pipelines streamline the development process, enabling rapid code integration, testing, and deployment.
 
+\
 **Infrastructure as Code (IaC):**
+\
 Delve into the realm of Infrastructure as Code (IaC) with tools like Terraform or CloudFormation, automating infrastructure provisioning and management.
 
+\
 **Security and Monitoring:**
+\
 Gain insights into the security measures in place and learn how monitoring and logging ensure the health and performance of deployed applications.
 
+\
 **Scalability and High Availability:**
+\
 Understand the project's design principles for scalability and high availability, ensuring optimal performance under varying workloads.
-
-**Contributions Welcome:**
-We encourage contributions from the DevOps community! Find out how you can get involved and help enhance this project.
 
 ## Prerequisites
 
-...
+- **Node.js Backend REST API:** I have developed the Node.js REST API already. You can find the project [here](https://github.com/sanjueranga/member-portal).
 
-## Setup Instructions
-
-...
-
-## Deployment Instructions
-
-...
+- **React Frontend:** I have developed the React frontend already. You can find the project [here](https://github.com/sanjueranga/member-portal).
 
 ## Dockerization
 
-...
+> **Installing and Configuring Docker on Linux**
+
+Follow these steps to install and configure Docker on your Linux machine. These instructions are generally applicable to popular Linux distributions like Ubuntu, CentOS, and Debian.
+
+**Note:** Ensure that you have administrative (root) or sudo privileges on your Linux machine.
+
+1. **Update Package Lists:**
+
+   Open a terminal and run the following command to update the package lists:
+
+   ```bash
+   sudo apt update  # For Ubuntu/Debian
+   # or
+   sudo yum update  # For CentOS 
+   ```
+
+   Install dependencies that are required for the Docker installation:
+For Ubuntu/Debian:
+
+    ```bash
+    sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+    
+    ```
+
+    Add Docker Repository (Ubuntu/Debian Only):
+    
+    For Ubuntu and Debian, add Docker's official GPG key and repository:
+
+    ```bash
+    
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+    echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+    ```
+
+    Install Docker Engine:
+
+     Update the package list one more time and then install Docker:
+
+    ```bash
+    sudo apt update  # For Ubuntu/Debian
+        # or
+    sudo yum makecache fast  # For CentOS
+
+    sudo apt install docker-ce  # For Ubuntu/Debian
+        # or
+    sudo yum install docker-ce  # For CentOS
+
+    ```
+
+    Enable and Start Docker: 
+    
+    Start the Docker service and enable it to start on boot:
+
+    ```bash
+    sudo systemctl start docker
+    sudo systemctl enable docker
+
+    ```
+
+    Verify Docker Installation:
+
+    Check if Docker is installed and running by running the following command:
+
+    ```bash
+        sudo docker --version
+
+    
+    ```
+
+
+
+
 
 ## Kubernetes Deployment
 
@@ -117,30 +168,6 @@ We encourage contributions from the DevOps community! Find out how you can get i
 ...
 
 ## Scaling and High Availability
-
-...
-
-## Contributing
-
-...
-
-## License
-
-...
-
-## Acknowledgments
-
-...
-
-## Contact Information
-
-...
-
-## Troubleshooting
-
-...
-
-## FAQ
 
 ...
 
