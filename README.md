@@ -97,73 +97,79 @@ Follow these steps to install and configure Docker on your Linux machine. These 
     Install dependencies that are required for the Docker installation:
     For Ubuntu/Debian:
 
-        ```bash
-        sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+    ```bash
+    sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 
-        ```
+    ```
 
-        Add Docker Repository (Ubuntu/Debian Only):
+    Add Docker Repository (Ubuntu/Debian Only):
 
-        For Ubuntu and Debian, add Docker's official GPG key and repository:
+    For Ubuntu and Debian, add Docker's official GPG key and repository:
 
-        ```bash
+    ```bash
 
-        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-        echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-        ```
+    ```
 
-        Install Docker Engine:
+    Install Docker Engine:
 
-         Update the package list one more time and then install Docker:
+    Update the package list one more time and then install Docker:
 
-        ```bash
-        sudo apt update  # For Ubuntu/Debian
-            # or
-        sudo yum makecache fast  # For CentOS
+    ```bash
+      sudo apt update  # For Ubuntu/Debian
+          # or
+      sudo yum makecache fast  # For CentOS
 
-        sudo apt install docker-ce  # For Ubuntu/Debian
-            # or
-        sudo yum install docker-ce  # For CentOS
+      sudo apt install docker-ce  # For Ubuntu/Debian
+          # or
+      sudo yum install docker-ce  # For CentOS
 
-        ```
+    ```
 
-        Enable and Start Docker:
+    Enable and Start Docker:
 
-        Start the Docker service and enable it to start on boot:
+    Start the Docker service and enable it to start on boot:
 
-        ```bash
-        sudo systemctl start docker
-        sudo systemctl enable docker
+    ```bash
+    sudo systemctl start docker
+    sudo systemctl enable docker
 
-        ```
+    ```
 
-        Verify Docker Installation:
+    Verify Docker Installation:
 
-        Check if Docker is installed and running by running the following command:
+    Check if Docker is installed and running by running the following command:
 
-        ```bash
-            sudo docker --version
+    ```bash
+       sudo docker --version
 
 
-        ```
+    ```
 
 > **Dockerizing API**
 
 **Include docker file into root directory of Node app**
 
+\
 ![Alt text](pics/dockerfile.png)
 
 **Build the Docker Image**
 
-`sudo docker build . -t my-node-api`
+```
+sudo docker build . -t my-node-api
+```
 
+\
 ![Alt text](pics/cImgTO.png)
 
 ** Check created docker images**
 
-`docker images`
+```
+docker images
+```
 
 ![Alt text](pics/imgs.png)
 
@@ -171,16 +177,20 @@ you can see our docker image is created
 
 **Run Docker Image**
 
-`docker run -p 8060:8060 -d my-node-api`
+```
+docker run -p 8060:8060 -d my-node-api
+```
 
 **See running docker images**
 
 `docker ps`
 
+\
 ![Alt text](pics/runningimgs.png)
 
 you can see image is currently running on port 8060
 
+\
 **Testing API with Postman**
 
 ![Alt text](pics/postman.png)
@@ -188,7 +198,9 @@ API call works properly
 
 **Stoping running container**
 
-`sudo docker stop  container-id`
+```
+sudo docker stop  container-id
+```
 
 <br/><br/><br/>
 
