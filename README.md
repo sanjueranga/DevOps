@@ -29,6 +29,8 @@
 10. [References](#references)
     - External documentation and resources.
 
+<br/><br/><br/><br/>
+
 ## Project Overview
 
 \
@@ -64,11 +66,15 @@ Gain insights into the security measures in place and learn how monitoring and l
 \
 Understand the project's design principles for scalability and high availability, ensuring optimal performance under varying workloads.
 
+<br/><br/><br/>
+
 ## Prerequisites
 
 - **Node.js Backend REST API:** I have developed the Node.js REST API already. You can find the project [here](https://github.com/sanjueranga/member-portal).
 
 - **React Frontend:** I have developed the React frontend already. You can find the project [here](https://github.com/sanjueranga/member-portal).
+
+<br/><br/><br/>
 
 ## Dockerization
 
@@ -78,98 +84,143 @@ Follow these steps to install and configure Docker on your Linux machine. These 
 
 **Note:** Ensure that you have administrative (root) or sudo privileges on your Linux machine.
 
-1. **Update Package Lists:**
+1.  **Update Package Lists:**
 
-   Open a terminal and run the following command to update the package lists:
-
-   ```bash
-   sudo apt update  # For Ubuntu/Debian
-   # or
-   sudo yum update  # For CentOS 
-   ```
-
-   Install dependencies that are required for the Docker installation:
-For Ubuntu/Debian:
-
-    ```bash
-    sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
-    
-    ```
-
-    Add Docker Repository (Ubuntu/Debian Only):
-    
-    For Ubuntu and Debian, add Docker's official GPG key and repository:
-
-    ```bash
-    
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-    echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-    ```
-
-    Install Docker Engine:
-
-     Update the package list one more time and then install Docker:
+    Open a terminal and run the following command to update the package lists:
 
     ```bash
     sudo apt update  # For Ubuntu/Debian
-        # or
-    sudo yum makecache fast  # For CentOS
-
-    sudo apt install docker-ce  # For Ubuntu/Debian
-        # or
-    sudo yum install docker-ce  # For CentOS
-
+    # or
+    sudo yum update  # For CentOS
     ```
 
-    Enable and Start Docker: 
-    
-    Start the Docker service and enable it to start on boot:
+    Install dependencies that are required for the Docker installation:
+    For Ubuntu/Debian:
 
-    ```bash
-    sudo systemctl start docker
-    sudo systemctl enable docker
+        ```bash
+        sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 
-    ```
+        ```
 
-    Verify Docker Installation:
+        Add Docker Repository (Ubuntu/Debian Only):
 
-    Check if Docker is installed and running by running the following command:
+        For Ubuntu and Debian, add Docker's official GPG key and repository:
 
-    ```bash
-        sudo docker --version
+        ```bash
 
-    
-    ```
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+        echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+        ```
+
+        Install Docker Engine:
+
+         Update the package list one more time and then install Docker:
+
+        ```bash
+        sudo apt update  # For Ubuntu/Debian
+            # or
+        sudo yum makecache fast  # For CentOS
+
+        sudo apt install docker-ce  # For Ubuntu/Debian
+            # or
+        sudo yum install docker-ce  # For CentOS
+
+        ```
+
+        Enable and Start Docker:
+
+        Start the Docker service and enable it to start on boot:
+
+        ```bash
+        sudo systemctl start docker
+        sudo systemctl enable docker
+
+        ```
+
+        Verify Docker Installation:
+
+        Check if Docker is installed and running by running the following command:
+
+        ```bash
+            sudo docker --version
 
 
+        ```
 
+> **Dockerizing API**
 
+**Include docker file into root directory of Node app**
+
+![Alt text](pics/dockerfile.png)
+
+**Build the Docker Image**
+
+`sudo docker build . -t my-node-api`
+
+![Alt text](pics/cImgTO.png)
+
+** Check created docker images**
+
+`docker images`
+
+![Alt text](pics/imgs.png)
+
+you can see our docker image is created
+
+**Run Docker Image**
+
+`docker run -p 8060:8060 -d my-node-api`
+
+**See running docker images**
+
+`docker ps`
+
+![Alt text](pics/runningimgs.png)
+
+you can see image is currently running on port 8060
+
+**Testing API with Postman**
+
+![Alt text](pics/postman.png)
+API call works properly
+
+**Stoping running container**
+
+`sudo docker stop  container-id`
+
+<br/><br/><br/>
 
 ## Kubernetes Deployment
 
 ...
+<br/><br/><br/>
 
 ## CI/CD Pipeline
 
 ...
+<br/><br/><br/>
 
 ## Infrastructure as Code (IaC)
 
 ...
+<br/><br/><br/>
 
 ## Monitoring and Logging
 
 ...
+<br/><br/><br/>
 
 ## Security
 
 ...
+<br/><br/><br/>
 
 ## Scaling and High Availability
 
 ...
+<br/><br/><br/>
 
 ## References
 
