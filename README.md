@@ -181,6 +181,8 @@ you can see our docker image is created
 docker run -p 8060:8060 -d my-node-api
 ```
 
+we can add environment when running `docker run -e ALLOWED_URL=value -p 8060:8060 -d my-node-api`
+
 **See running docker images**
 
 `docker ps`
@@ -201,6 +203,60 @@ API call works properly
 ```
 sudo docker stop  container-id
 ```
+
+> **Dockerizing REACT frontend**
+
+**Dockerfile**
+
+```
+# Use an official Node.js runtime as a parent image
+FROM node:18
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json (if available)
+COPY package*.json ./
+
+# Install application dependencies
+RUN npm install
+
+# Copy the rest of your application's source code
+COPY . .
+
+
+
+# Build your React app
+RUN npm run build
+
+# Expose the port your React app will run on (usually 3000)
+EXPOSE 3000
+
+# Define the command to run your React app
+CMD ["npm", "start"]
+```
+
+Dokcerignore file
+
+```
+.env
+node_modules
+```
+
+**To create the Docker Image**
+use the same command as above
+`sudo docker build . -t my-react-app`
+
+**To Run**
+
+```
+sudo docker run -e REACT_APP_API_URL=http://localhost:8060 -e REACT_APP_API_KEY=value -p 3000:3000 my-react-app
+
+```
+
+Now we can see the both frontend and backend running as docker images.
+
+**Make sure allowing correct URLs in CORS in node environments**
 
 <br/><br/><br/>
 
