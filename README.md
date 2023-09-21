@@ -9,24 +9,28 @@
    - Requirements for running and deploying the project.
 
 3. [Dockerization](#dockerization)
+
    - Building Docker images and running containers.
-4. [Kubernetes Deployment](#kubernetes-deployment)
+
+4. [Setting up AWS infrastructure](#setting-up-aws-infrastructure)
+   - Creating VPC (virtual private cloud) and needed EC2 instances.
+5. [Kubernetes Deployment](#kubernetes-deployment)
    - Deploying the application to a Kubernetes cluster.
-5. [CI/CD Pipeline](#ci-cd-pipeline)
+6. [CI/CD Pipeline](#ci-cd-pipeline)
    - Details of the Continuous Integration/Continuous Deployment pipeline.
-6. [Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
+7. [Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
    - Provisioning and managing cloud infrastructure with IaC tools.
-7. [Monitoring and Logging](#monitoring-and-logging)
+8. [Monitoring and Logging](#monitoring-and-logging)
    - How the application and infrastructure are monitored, including logs and metrics.
-8. [Security](#security)
+9. [Security](#security)
 
    - Security measures implemented, access controls, and best practices.
 
-9. [Scaling and High Availability](#scaling-and-high-availability)
+10. [Scaling and High Availability](#scaling-and-high-availability)
 
-   - Design for scalability and high availability.
+- Design for scalability and high availability.
 
-10. [References](#references)
+11. [References](#references)
     - External documentation and resources.
 
 <br/><br/><br/><br/>
@@ -284,9 +288,12 @@ fi
 
 <br/><br/><br/>
 
+## Setting up AWS infrastructure
+
+<br/><br/><br/>
+
 ## Kubernetes Deployment
 
-...
 <br/><br/><br/>
 
 ## CI/CD Pipeline
