@@ -258,6 +258,30 @@ Now we can see the both frontend and backend running as docker images.
 
 **Make sure allowing correct URLs in CORS in node environments**
 
+**Here an additional bash script to clear all containers after test**
+
+```bash
+#!/bin/bash
+
+# Get a list of all containers (both running and exited)
+container_list=$(docker ps -aq)
+
+# Check if there are any containers to stop and remove
+if [ -n "$container_list" ]; then
+  # Iterate through each container ID, stop it, and then remove it
+  for container_id in $container_list; do
+    echo "Stopping container: $container_id"
+    docker stop "$container_id"
+
+    echo "Removing container: $container_id"
+    docker rm "$container_id"
+  done
+else
+  echo "No containers to stop and remove."
+fi
+
+```
+
 <br/><br/><br/>
 
 ## Kubernetes Deployment
