@@ -290,9 +290,79 @@ fi
 
 ## Setting up AWS infrastructure
 
+> **Creating VPC**
+
+Here i used the template AWS provides ,VPC for EKS . provided in this documentation
+
+https://docs.aws.amazon.com/eks/latest/userguide/creating-a-vpc.html
+
+> Go to cloudFormation
+
+create new Stack
+
+![Alt text](pics/cfstack.png)
+Enter the template link in S3 URL.
+
+this will create a VPC for our EKS cluster, with 2 public, 2 private subnets
+
 <br/><br/><br/>
 
 ## Kubernetes Deployment
+
+> **Creating EKS cluster**
+
+Using EKS management console, create new cluster
+
+![Alt text](pics/clusterconfig.png)
+
+Network settings
+
+![Alt text](pics/clusternet.png)
+
+Security group created by our VPC
+
+![Alt text](pics/clustersec.png)
+
+Once the Cluster is created. Create a Node Group
+
+![Alt text](pics/clusterac.png)
+
+> **Creating Node Group**
+
+![Alt text](pics/nodeg.png)
+
+**Selecting EC2 instances type**
+
+![Alt text](pics/ec2type.png)
+
+For now we set size is 2, we can change it later
+
+Network configuration
+
+![Alt text](pics/ec2n.png)
+
+**EC2 are created**
+
+![Alt text](pics/ec2l.png)
+
+Access one of EC2 using SSH. OR in local machine
+
+- install AWS CLI https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+
+- Kubectl
+  https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+Then update kubeconfig
+
+```
+   aws eks update-kubeconfig --cluster-name --region us-east-1
+```
+
+Then you can see Cluster details
+
+`kubectl get nodes`
+
+![Alt text](pics/getnodes.png)
 
 <br/><br/><br/>
 
