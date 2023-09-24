@@ -1,4 +1,4 @@
-# End-to-end DevOps Project
+# EKS Deployment Demo
 
 ## Table of Contents
 
@@ -38,7 +38,7 @@
 ## Project Overview
 
 \
-Welcome to the DevOps Project Documentation! This comprehensive guide provides detailed insights into a dynamic DevOps project that leverages modern cloud technologies, containerization, CI/CD pipelines, and Infrastructure as Code (IaC) practices.
+Welcome to the DevOps Project Documentation! This comprehensive guide provides detailed insights into a dynamic DevOps project that leverages modern cloud technologies.
 
 \
 **Cloud-Centric Approach:**
@@ -51,24 +51,6 @@ Explore how this project harnesses the power of leading cloud providers, such as
 Dive into the world of containerization with Docker and learn how Kubernetes orchestrates containers for efficient application management.
 
 \
-**Continuous Integration/Continuous Deployment (CI/CD):**
-\
- Discover how automated CI/CD pipelines streamline the development process, enabling rapid code integration, testing, and deployment.
-
-\
-**Infrastructure as Code (IaC):**
-\
-Delve into the realm of Infrastructure as Code (IaC) with tools like Terraform or CloudFormation, automating infrastructure provisioning and management.
-
-\
-**Security and Monitoring:**
-\
-Gain insights into the security measures in place and learn how monitoring and logging ensure the health and performance of deployed applications.
-
-\
-**Scalability and High Availability:**
-\
-Understand the project's design principles for scalability and high availability, ensuring optimal performance under varying workloads.
 
 <br/><br/><br/>
 
@@ -478,33 +460,4 @@ kubectl get all
 
 ![Alt text](pics/all.png)
 
-<br/><br/><br/>
-
-## CI/CD Pipeline
-
-...
-<br/><br/><br/>
-
-## Infrastructure as Code (IaC)
-
-...
-<br/><br/><br/>
-
-## Monitoring and Logging
-
-...
-<br/><br/><br/>
-
-## Security
-
-...
-<br/><br/><br/>
-
-## Scaling and High Availability
-
-...
-<br/><br/><br/>
-
-## References
-
-...
+s
