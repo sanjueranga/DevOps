@@ -364,6 +364,120 @@ Then you can see Cluster details
 
 ![Alt text](pics/getnodes.png)
 
+> **Create Deployments**
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-js-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-js
+  template:
+    metadata:
+      labels:
+        app: node-js
+    spec:
+      containers:
+        - name: node-js
+          image: sanjueranga/my-node-api:latest
+          ports:
+            - containerPort: 8060
+          env:
+            - name: MONGODB_URL
+              value: ""
+            - name: NODE_ENV
+              value: "production"
+            - name: JWT_SECRET
+              value: "abc123"
+            - name: CSUP_API_KEY
+              value: ""
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-js-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: node-js
+  ports:
+    - port: 8060
+      targetPort: 8060
+      protocol: TCP
+
+
+```
+
+**Frontend**
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-js-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react-js
+  template:
+    metadata:
+      labels:
+        app: react-js
+    spec:
+      containers:
+        - name: react-js
+          image: sanjueranga/my-react-app:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_API_URL
+              value: $API_ELB_PUBLIC_FQDN
+            - name: REACT_APP_CSUP_API_KEY
+              value: ""
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-js-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: react-js
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+
+```
+
+> **Apply Deployment**
+
+```
+kubectl apply -f name.yaml
+```
+
+**Get pods**
+
+```
+kubectl get pods
+```
+
+![Alt text](pics/pods.png)
+
+**See all details**
+
+```
+kubectl get all
+```
+
+![Alt text](pics/all.png)
+
 <br/><br/><br/>
 
 ## CI/CD Pipeline
