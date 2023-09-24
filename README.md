@@ -1,4 +1,4 @@
-# End-T0-End DevOps Project Documentation
+# End-to-End DevOps Project Documentation
 
 **(ongoing porject)s**
 
@@ -48,7 +48,6 @@ Welcome to the DevOps Project Documentation! This comprehensive guide provides d
   [here](https://github.com/sanjueranga/springboot-microservices).
 
 - **Angular Front-end:**
-
 
 ## Dockerization
 
