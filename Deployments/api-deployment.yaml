@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-js-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-js
+  template:
+    metadata:
+      labels:
+        app: node-js
+    spec:
+      containers:
+        - name: node-js
+          image: sanjueranga/my-node-api:latest
+          ports:
+            - containerPort: 8060
+          env:
+            - name: MONGODB_URL
+              value: "mongodb+srv://dbuser:DbUsEr@memberdb.f9jis.mongodb.net/approved_db?retryWrites=true&w=majority"
+            - name: NODE_ENV
+              value: "production"
+            - name: JWT_SECRET
+              value: "abc123"
+            - name: CSUP_API_KEY
+              value: "6LfBgjggAAAAAFQybxFfng2wyB2Uadi1HoGAciZa"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-js-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: node-js
+  ports:
+    - port: 8060
+      targetPort: 8060
+      protocol: TCP

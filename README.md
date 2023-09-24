@@ -355,7 +355,7 @@ Access one of EC2 using SSH. OR in local machine
 Then update kubeconfig
 
 ```
-   aws eks update-kubeconfig --cluster-name --region us-east-1
+   aws eks update-kubeconfig --region region-code --name my-cluster
 ```
 
 Then you can see Cluster details
