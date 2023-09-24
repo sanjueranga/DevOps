@@ -21,7 +21,7 @@ spec:
             - name: REACT_APP_API_URL
               value: $API_ELB_PUBLIC_FQDN
             - name: REACT_APP_CSUP_API_KEY
-              value: "6LfBgjggAAAAAFQybxFfng2wyB2Uadi1HoGAciZa"
+              value: ""
 
 ---
 apiVersion: v1

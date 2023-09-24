@@ -19,13 +19,13 @@ spec:
             - containerPort: 8060
           env:
             - name: MONGODB_URL
-              value: "mongodb+srv://dbuser:DbUsEr@memberdb.f9jis.mongodb.net/approved_db?retryWrites=true&w=majority"
+              value: ""
             - name: NODE_ENV
               value: "production"
             - name: JWT_SECRET
               value: "abc123"
             - name: CSUP_API_KEY
-              value: "6LfBgjggAAAAAFQybxFfng2wyB2Uadi1HoGAciZa"
+              value: ""
 ---
 apiVersion: v1
 kind: Service
