@@ -1,80 +1,44 @@
-# End-to-End DevOps Project Documentation
+# DevOps Demo Projects
 
-**(ongoing porject)s**
+Welcome to my collection of DevOps demo projects showcasing various AWS and CI/CD concepts. Explore the folders below to dive into each project:
 
-## Table of Contents
+## 1. [Project "S3 Hosting" 🌐](./s3-hosting)
 
-1. [Project Overview](#project-overview)
-   - Description of the project's purpose and goals.
-2. [Prerequisites](#prerequisites)
-   - Requirements for running and deploying the project.
-3. [Setup Instructions](#setup-instructions)
-   - How to set up the project locally or in your chosen environment.
-4. [Dockerization](#dockerization)
-   - Building Docker images and running containers.
-5. [Deployment](#deployment)
-   - Deploying the application to a Kubernetes cluster.
-6. [CI/CD Pipeline](#ci-cd-pipeline)
-   - Details of the Continuous Integration/Continuous Deployment pipeline.
-7. [Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
-   - Provisioning and managing cloud infrastructure with IaC tools.
-8. [Monitoring and Logging](#monitoring-and-logging)
-   - How the application and infrastructure are monitored, including logs and metrics.
-9. [Security](#security)
-   - Security measures implemented, access controls, and best practices.
-10. [Scaling and High Availability](#scaling-and-high-availability)
+**Description:**
+Experience the power of AWS S3 by hosting a dynamic static website. This project demonstrates how to set up a static site using an S3 bucket and implements a robust pipeline with AWS CodePipeline and CodeCommit for seamless deployments.
 
-    - Design for scalability and high availability.
+---
 
-11. [References](#references)
-    - External documentation and resources.
+## 2. [Project "Kubernetes on EC2" 🚀](./k8s-on-ec2)
 
-## Project Overview
+**Description:**
+Learn the ropes of Kubernetes from the ground up! In this project, we manually create a Kubernetes cluster using AWS EC2 instances. Discover the core concepts of container orchestration and cluster management.
 
-\
-Welcome to the DevOps Project Documentation! This comprehensive guide provides detailed insights into a dynamic DevOps project that leverages modern cloud technologies.
+---
 
-<br/>
+## 3. [Project "EKS - Elastic Kubernetes Service" 🌟](./eks)
 
-## Prerequisites
+**Description:**
+Elevate your Kubernetes game with Amazon EKS. Dive into the world of managed Kubernetes, utilize VPC for network isolation, and deploy a full-stack application with a Node.js backend, React frontend, and load balancing capabilities.
 
-- **SpringBoot Microservices**
+---
 
-  - Two microservices
-  - service registry
-  - discover client
-  - API gateway
+## 4. [Project "AWS Lambda Web API" ☁️](./aws-lambda-web-api)
 
-  [here](https://github.com/sanjueranga/springboot-microservices).
+_(Note: Documentation for this project is in progress.)_
 
-- **Angular Front-end:**
+**Description:**
+Experience serverless computing at its finest! Build a simple yet powerful web API using AWS Lambda. Witness the magic of autoscaling and pay-per-use pricing while creating scalable, responsive applications.
 
-## Dockerization
+---
 
-...
+## 5. [Project "CI/CD Pipeline with Jenkins" 🛠️](./ci-cd-jenkins)
 
-## Deployment
+_(Note: Documentation for this project is in progress.)_
 
-## CI/CD Pipeline
+**Description:**
+Step into the world of Continuous Integration and Continuous Deployment (CI/CD) with Jenkins. This project showcases a robust CI/CD pipeline in action, deploying a Spring Boot microservices ecosystem. Explore API gateways, service registries, multiple databases, and service discovery clients.
 
-...
+---
 
-## Infrastructure as Code (IaC)
-
-...
-
-## Monitoring and Logging
-
-...
-
-## Security
-
-...
-
-## Scaling and High Availability
-
-...
-
-## References
-
-...
+Each project folder contains detailed documentation and code examples to help you grasp these DevOps concepts. Happy exploring!

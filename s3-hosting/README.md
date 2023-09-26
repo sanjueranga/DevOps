@@ -2,7 +2,7 @@
 
 ## Hosting a static website using Amazon S3
 
-I have use 3 aws services here,
+I have used 3 aws services here,
 codecommit,pipeline,S3 buckets.
 All are free-tier eligible and free of charge
 
