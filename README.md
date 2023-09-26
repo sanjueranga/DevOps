@@ -23,12 +23,12 @@ Elevate your Kubernetes game with Amazon EKS. Dive into the world of managed Kub
 
 ---
 
-## 4. [Project "AWS Lambda Web API" ☁️](./aws-lambda-web-api)
+## 4. [Project "AWS Lambda REST API" ☁️](./aws-lambda-rest-api)
 
 _(Note: Documentation for this project is in progress.)_
 
 **Description:**
-Experience serverless computing at its finest! Build a simple yet powerful web API using AWS Lambda. Witness the magic of autoscaling and pay-per-use pricing while creating scalable, responsive applications.
+Experience serverless computing at its finest! Build a simple yet powerful RESTful API using AWS Lambda. Witness the magic of autoscaling and pay-per-use pricing while creating scalable, responsive applications.
 
 ---
 
