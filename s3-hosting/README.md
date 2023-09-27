@@ -1,4 +1,4 @@
-# Pipeline Demo
+# S3 Hosting + Pipeline
 
 ## Hosting a static website using Amazon S3
 

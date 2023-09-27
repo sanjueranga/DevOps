@@ -1,4 +1,4 @@
-# Creating k8 cluster on AWS
+# Kubernetes on EC2
 
 Here we are creating a k8 cluster manually with EC2 , instead of using EKS.
 

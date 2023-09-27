@@ -1,4 +1,4 @@
-# EKS Deployment Demo
+# EKS - Elastic Kubernetes Service
 
 ## Table of Contents
 
