@@ -142,3 +142,10 @@ You can find the postman documentation [here](https://documenter.getpostman.com/
 **Edit user**
 
 ![Alt text](pics/edit-user.png)
+
+**Get all users**
+![Alt text](pics/getAll.png)
+
+**Delete user**
+
+![Alt text](pics/Delete.png)
