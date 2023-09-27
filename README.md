@@ -25,7 +25,6 @@ Elevate your Kubernetes game with Amazon EKS. Dive into the world of managed Kub
 
 ## 4. [Serverless REST API with AWS lambda + APIgateway + DynamoDB ☁️](./aws-lambda-rest-api)
 
-_(Note: Documentation for this project is in progress.)_
 
 **Description:**
 Experience serverless computing at its finest! Build a simple yet powerful web API using AWS Lambda, AWS API Gateway, and DynamoDB. Witness the magic of serverless architecture, autoscaling, and pay-per-use pricing while creating scalable, responsive applications with a fully managed NoSQL database.
