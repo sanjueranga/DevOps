@@ -7,9 +7,6 @@
 2. [Prerequisites](#prerequisites)
 
    - Requirements for running and deploying the project.
-   - DynamoDB table
-
-   ![Alt text](pics/createtable.png)
 
 3. [AWS Lambda](#aws-lambda)
 
@@ -45,6 +42,9 @@ In this project, we have developed a serverless RESTful API using AWS Lambda, AP
 
 - AWS account
 - Postman
+- DynamoDB table
+
+  ![Alt text](pics/createtable.png)
 
 **IAM user with following poliecies**
 
