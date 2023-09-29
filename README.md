@@ -22,8 +22,12 @@ Learn the ropes of Kubernetes from the ground up! In this project, we manually c
 Elevate your Kubernetes game with Amazon EKS. Dive into the world of managed Kubernetes, utilize VPC for network isolation, and deploy a full-stack application with a Node.js backend, React frontend, and load balancing capabilities.
 
 ---
+## 4. [IaC with Google Cloud and Terraform ☁️](./iac-gcp-terraform/)
 
-## 4. [Serverless REST API with AWS lambda + APIgateway + DynamoDB ☁️](./aws-lambda-rest-api)
+**Description**
+Explore Infrastructure as Code (IaC) principles with Google Cloud Platform (GCP) and Terraform. This project guides you through creating and managing GCP resources programmatically. 
+
+## 5. [Serverless REST API with AWS lambda + APIgateway + DynamoDB ☁️](./aws-lambda-rest-api)
 
 
 **Description:**
@@ -31,7 +35,7 @@ Experience serverless computing at its finest! Build a simple yet powerful web A
 
 ---
 
-## 5. [CI/CD Pipeline with Jenkins 🛠️](./ci-cd-jenkins)
+## 6. [CI/CD Pipeline with Jenkins 🛠️](./ci-cd-jenkins)
 
 _(Note: Documentation for this project is in progress.)_
 
