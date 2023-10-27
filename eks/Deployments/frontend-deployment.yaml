@@ -1,38 +1,36 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sanju
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-js-deployment
+  namespace: sanju
+  name: frontend-deployment
 spec:
-  replicas: 2
   selector:
     matchLabels:
-      app: react-js
+      app.kubernetes.io/name: frontend
+  replicas: 2
   template:
     metadata:
       labels:
-        app: react-js
+        app.kubernetes.io/name: frontend
     spec:
       containers:
-        - name: react-js
-          image: sanjueranga/my-react-app:latest
-          ports:
-            - containerPort: 3000
-          env:
-            - name: REACT_APP_API_URL
-              value: $API_ELB_PUBLIC_FQDN
-            - name: REACT_APP_CSUP_API_KEY
-              value: ""
-
+      - name: frontend
+        image: sanjueranga/my-react-app:latest
+        imagePullPolicy: Always
+        env:
+          - name: REACT_APP_API_URL
+            value: $API_URL
+          - name: REACT_APP_CSUP_API_KEY
+            value: 6LfBgjggAAAAAFQybxFfng2wyB2Uadi1HoGAciZa
+        ports:
+        - containerPort: 3000
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: react-js-service
-spec:
-  type: LoadBalancer
-  selector:
-    app: react-js
-  ports:
-    - protocol: TCP
-      port: 3000
-      targetPort: 3000
+
+          
+          
