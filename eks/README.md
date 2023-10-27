@@ -34,7 +34,6 @@ Explore how this project harnesses the power of leading cloud providers, such as
 \
 Dive into the world of containerization with Docker and learn how Kubernetes orchestrates containers for efficient application management.
 
-\
 
 <br/><br/><br/>
 
