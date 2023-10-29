@@ -40,4 +40,7 @@ Experience serverless computing at its finest! Build a simple yet powerful web A
 **Description:**
 Dive deep into the world of Continuous Integration and Continuous Deployment (CI/CD) with Jenkins and Spinnaker. In this project, we demonstrate a robust CI/CD pipeline that not only leverages Jenkins for building and testing but also incorporates Spinnaker for advanced deployment strategies. Explore the power of Spinnaker for blue-green deployments, canary releases, and more while deploying a Spring Boot microservices ecosystem. Additionally, this project covers various aspects of CI/CD, including API gateways, service registries, multiple databases, and service discovery clients, making it a comprehensive resource for modern DevOps practices.
 
-Each project folder contains detailed documentation and code examples to help you grasp these DevOps concepts. Happy exploring!
+
+
+
+*Each project folder contains detailed documentation and code examples to help you grasp these DevOps concepts. Happy exploring!*
